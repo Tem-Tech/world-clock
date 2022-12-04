@@ -33,3 +33,21 @@ function TimeUpdate() {
 
 TimeUpdate();
 setInterval(TimeUpdate, 1000);
+
+function addCity(event) {
+  let TimeZone = event.target.value;
+  let CityName = TimeZone.replace("/", " ").split(" ")[1];
+  console.log(CityName);
+  let CityTime = moment().tz(TimeZone);
+  let CityElement = document.querySelector("#blank");
+  CityElement.classList.add("city");
+  CityElement.innerHTML = `<div>
+              <h2>${CityName}</h2>
+              <div class="date">${CityTime.format("Do MMM YYYY")}</div>
+            </div>
+            <div class="time">${CityTime.format("h:mm:ss")} ${CityTime.format(
+    "[<small>]a[</small>]"
+  )}</div>`;
+}
+let citySelectElement = document.querySelector("#timezone");
+citySelectElement.addEventListener("change", addCity);
