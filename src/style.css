@@ -6,28 +6,63 @@ body {
 .container {
   text-align: center;
   border-radius: 20px;
-  max-width: 65%;
+  max-width: 60%;
   margin: 60px auto;
   background: #d8f5d4;
-  color: #61b390;
+  color: rgb(97, 179, 144);
   border: 2px solid;
-  box-shadow: #01352c 0px 7px 29px 0px;
+  box-shadow: rgb(1, 53, 44) 0px 7px 29px 0px;
 }
+
 h1 {
-  color: #01352c;
+  color: rgb(16, 95, 82);
 }
 h2 {
-  color: #01352c;
+  color: rgb(97, 179, 144);
 }
 select {
   display: block;
   margin: 0 auto;
   padding: 15px;
+  font-size: 20px;
   text-align: center;
   width: 80%;
-  border: 2px solid #01352c;
-  border-radius: 5px;
+  border: 2px solid #2d8c7c;
+  color: #2d8c7c;
+  border-radius: 15px;
+}
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  border-bottom: 2px dashed rgb(97, 179, 144, 0.6);
+}
+
+.city h2 {
+  color: rgb(33, 121, 107);
+  margin: 0 0 0 10px;
+}
+.city:last-child {
+  border: none;
+}
+.time {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 10px;
+}
+.time small {
+  font-size: 20px;
+  line-height: 35px;
+}
+.date {
+  opacity: 0.7;
+  font-weight: bold;
+  margin: 10px;
 }
 #timezone {
   background-color: #d8f5d4;
+}
+footer {
+  font-size: 24px;
+  color: rgb(1, 53, 44, 0.8);
 }
