@@ -62,6 +62,37 @@ select {
 #timezone {
   background-color: #d8f5d4;
 }
+#Reset {
+  display: none;
+}
+span {
+  animation: blink 1s linear 1;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+button {
+  border-radius: 15px;
+  border: 1px solid #2d8c7c;
+  color: #2d8c7c;
+  margin: auto;
+  background: #d8f5d4;
+  padding: 10px;
+}
 footer {
   font-size: 24px;
   color: rgb(1, 53, 44, 0.8);
