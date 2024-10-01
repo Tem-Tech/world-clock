@@ -1,3 +1,4 @@
+// Global styles
 body {
   background: #61b390;
   text-align: center;
@@ -13,50 +14,63 @@ body {
   color: rgb(97, 179, 144);
   border: 2px solid;
   box-shadow: 0px 7px 29px 0px rgb(1, 53, 44);
-}
-.world-clock__container h1.world-clock__title {
-  color: rgb(16, 95, 82);
-}
-.world-clock__container h2.world-clock__instruction {
-  color: rgb(97, 179, 144);
-}
-.world-clock__container select.world-clock__select {
-  display: block;
-  margin: 0 auto;
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-  width: 80%;
-  border: 2px solid #2d8c7c;
-  color: #2d8c7c;
-  border-radius: 15px;
-}
-.world-clock__container .world-clock__cities .world-clock__city {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 0;
-  border-bottom: 2px dashed rgba(97, 179, 144, 0.6);
-}
-.world-clock__container .world-clock__cities .world-clock__city:last-child {
-  border: none;
-}
-.world-clock__container .world-clock__cities .world-clock__city .world-clock__city__info h2.world-clock__city__name {
-  color: rgb(33, 121, 107);
-  margin: 0 0 0 10px;
-}
-.world-clock__container .world-clock__cities .world-clock__city .world-clock__city__info .world-clock__city__date {
-  opacity: 0.7;
-  font-weight: bold;
-  margin: 10px;
-}
-.world-clock__container .world-clock__cities .world-clock__city .world-clock__city__time {
-  font-size: 36px;
-  font-weight: bold;
-  margin: 10px;
-}
-.world-clock__container .world-clock__cities .world-clock__city .world-clock__city__time small {
-  font-size: 20px;
-  line-height: 35px;
+
+  h1.world-clock__title {
+    color: rgb(16, 95, 82);
+  }
+
+  h2.world-clock__instruction {
+    color: rgb(97, 179, 144);
+  }
+
+  select.world-clock__select {
+    display: block;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+    border: 2px solid #2d8c7c;
+    color: #2d8c7c;
+    border-radius: 15px;
+  }
+
+  .world-clock__cities {
+    .world-clock__city {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      border-bottom: 2px dashed rgba(97, 179, 144, 0.6);
+
+      &:last-child {
+        border: none;
+      }
+
+      .world-clock__city__info {
+        h2.world-clock__city__name {
+          color: rgb(33, 121, 107);
+          margin: 0 0 0 10px;
+        }
+
+        .world-clock__city__date {
+          opacity: 0.7;
+          font-weight: bold;
+          margin: 10px;
+        }
+      }
+
+      .world-clock__city__time {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 10px;
+
+        small {
+          font-size: 20px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
 }
 
 #timezone {
@@ -88,6 +102,7 @@ body {
     opacity: 0.2;
   }
 }
+
 button {
   border-radius: 15px;
   border: 1px solid #2d8c7c;
@@ -102,6 +117,7 @@ footer {
   color: rgba(1, 53, 44, 0.8);
 }
 
+// Media queries
 @media (max-width: 320px) {
   .world-clock__city__time {
     font-size: 20px;
@@ -111,7 +127,7 @@ footer {
     font-size: 12px;
   }
 }
-@media (min-width: 321px) and (max-width: 375px) {
+@media (min-width:321px) and  (max-width: 375px) {
   .world-clock__city__time {
     font-size: 22px;
   }
@@ -120,7 +136,7 @@ footer {
     font-size: 14px;
   }
 }
-@media (min-width: 376px) and (max-width: 425px) {
+@media (min-width:376px) and (max-width: 425px) {
   .world-clock__container {
     max-width: 95%;
   }
@@ -151,4 +167,4 @@ footer {
   .world-clock__city__time {
     font-size: 32px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
